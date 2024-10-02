@@ -46,7 +46,7 @@ public class Tracker {
 
     }
 
-    // Secondary Method: Sort the track
+    // Secondary Method: Sort the tracks
 
     public void sortTrack() {
 
