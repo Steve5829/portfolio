@@ -51,12 +51,7 @@ public class Tracker1L extends TrackerSecondary {
      * Kernel Methods
      */
 
-    /**
-     * Retrieves the current map holding track data.
-     *
-     * @return The Map holding the track data entries.
-     */
-    @Override
+
     protected Map<String, Double> getMap() {
         return this.trackMap;
     }
@@ -100,8 +95,15 @@ public class Tracker1L extends TrackerSecondary {
      */
     @Override
     public String toString() {
-
-        return super.toString();
+StringBuilder sb = new StringBuilder("{");
+        for (Map.Pair<String, Double> pair : this.trackMap) {
+        sb.append(pair.key()).append(": ").append(pair.value()).append(", ");
+    }
+    if (sb.length() > 1) {
+        sb.setLength(sb.length() - 2);
+    }
+    sb.append("}");
+    return sb.toString();
     }
 
     /**
@@ -113,7 +115,14 @@ public class Tracker1L extends TrackerSecondary {
     @Override
     public boolean equals(Object obj) {
 
-        return super.equals(obj);
+         if (this == obj) {
+        return true;
+    }
+    if (!(obj instanceof Tracker1L)) {
+        return false;
+    }
+    Tracker1L other = (Tracker1L) obj;
+    return this.trackMap.equals(other.trackMap);
     }
 
     /**
@@ -123,7 +132,7 @@ public class Tracker1L extends TrackerSecondary {
      */
     @Override
     public int hashCode() {
-        
-        return super.hashCode();
+
+        return this.trackMap.hashCode();
     }
 }
