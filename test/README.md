@@ -1,10 +1,17 @@
-# Test Folder
+# Tracker Project
 
-This README exists, so the folder shows up in source control like git. This
-file is not needed and can be safely deleted. 
+## Overview
+The Tracker project is a Java-based component that tracks financial transactions. It uses a `Map` structure to associate transaction types with amounts.
 
-However, for completeness, this folder exists for storing JUnit test files.
-Test folders can be much less structured than source folders, but I would
-generally recommend following the same directory structure as the source folder.
-In other words, include the package paths, such as 
-`components/naturalnumber/...`.
+## Features
+- Add, remove, and manage financial tracks.
+- Sort tracks by amount.
+- Provides a human-readable representation of tracks.
+
+## Setup
+1. Clone the repository.
+2. Compile the project using `javac`.
+3. Run use cases or tests using `java` and `JUnit`.
+
+## Usage
+Run the `BudgetTracker` or `ExpenseAnalysis` 
